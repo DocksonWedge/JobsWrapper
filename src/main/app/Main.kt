@@ -2,6 +2,7 @@ package main.kotlin
 
 
 import app.client.JobsClient
+import app.client.SkillsClient
 import app.model.JobsAutocompleteEntry
 import io.ktor.application.*
 import io.ktor.http.*
@@ -10,6 +11,7 @@ import io.ktor.routing.*
 import io.ktor.server.engine.*
 import io.ktor.server.netty.*
 import app.model.Health
+import app.model.SkillsAutocompleteEntry
 import kotlinx.serialization.builtins.list
 import kotlinx.serialization.json.*
 
@@ -43,8 +45,8 @@ fun main(args: Array<String>) {
             post("/skills/autocomplete") {
                 val params = call.parameters
                 call.respondText(
-                        json.stringify(JobsAutocompleteEntry.serializer().list,
-                                JobsClient.autocomplete(
+                        json.stringify(SkillsAutocompleteEntry.serializer().list,
+                                SkillsClient.autocomplete(
                                         params["begins_with"] ?: "",
                                         params["contains"] ?: "",
                                         params["ends_with"] ?: ""

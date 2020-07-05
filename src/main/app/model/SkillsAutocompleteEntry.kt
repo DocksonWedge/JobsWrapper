@@ -1,12 +1,12 @@
 package app.model
 
+import app.core.UUIDSerializer
 import kotlinx.serialization.Serializable
+import java.util.*
 
 @Serializable
-data class JobsAutocompleteEntry(
-        val parent_uuid: String,
-        val normalized_job_title: String,
+data class SkillsAutocompleteEntry(
         val uuid: String,
+        val normalized_skill_name: String,
         val suggestion: String
 )
-

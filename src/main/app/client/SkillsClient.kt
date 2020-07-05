@@ -1,7 +1,7 @@
 package app.client
 
-import app.model.JobsAutocompleteEntry
 import app.model.AutocompleteParams
+import app.model.SkillsAutocompleteEntry
 import io.ktor.client.*
 import io.ktor.client.engine.apache.Apache
 import io.ktor.client.features.json.JsonFeature
@@ -10,9 +10,9 @@ import io.ktor.client.request.get
 import io.ktor.client.request.parameter
 import kotlinx.coroutines.runBlocking
 
-object JobsClient {
+object SkillsClient {
 
-    private const val BASE_PATH = "/jobs"
+    private const val BASE_PATH = "/skills"
     private val BASE_URL = System.getenv("DATA_AT_WORK_URL")
 
     private val client = HttpClient(Apache) {
@@ -22,12 +22,12 @@ object JobsClient {
     }
 
     //TODO - integration test
-    fun autocomplete(begins_with: String, contains: String, ends_with: String): List<JobsAutocompleteEntry> {
+    fun autocomplete(begins_with: String, contains: String, ends_with: String): List<SkillsAutocompleteEntry> {
         val param =
                 AutocompleteParams(begins_with, contains, ends_with)
                         .getEffectiveParam()
         return runBlocking {
-            return@runBlocking client.get<List<JobsAutocompleteEntry>>(
+            return@runBlocking client.get<List<SkillsAutocompleteEntry>>(
                     urlString = "$BASE_URL$BASE_PATH/autocomplete",
                     block = {
                         parameter(param.first, param.second)
