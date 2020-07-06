@@ -1,8 +1,6 @@
 package app.model
 
-import app.core.UUIDSerializer
 import kotlinx.serialization.Serializable
-import java.util.*
 
 @Serializable
 data class SkillsAutocompleteEntry(

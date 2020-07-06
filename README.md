@@ -5,13 +5,14 @@ This is an example project with a simple api to show off automated REST testing 
   * Kotlinx
   * Maven
 * Test Framework 
-  * JUnit
+  * Kotlin-test + JUnit5
   * RESTAssured
-  * AssertJ
   * Spek for BDD
   
 To Add:
 * Dockerize container and tests
+* jacoco for code coverage
 * Add Dependecy mocks
 * Create CLI tools
+* Performance tests? (against mocks only)
 * Setup test deploy pipeline
