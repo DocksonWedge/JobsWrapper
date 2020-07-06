@@ -1,4 +1,4 @@
-package main.kotlin
+package app
 
 
 import app.client.JobsClient
@@ -12,12 +12,17 @@ import io.ktor.server.engine.*
 import io.ktor.server.netty.*
 import app.model.Health
 import app.model.SkillsAutocompleteEntry
+import app.service.JobsAutocompleteService
+import app.service.SkillsAutocompleteService
+import io.ktor.features.DefaultHeaders
 import kotlinx.serialization.builtins.list
 import kotlinx.serialization.json.*
+
 
 fun main(args: Array<String>) {
     val json = Json(JsonConfiguration.Stable)
     val server = embeddedServer(Netty, port = 8080) {
+        install(DefaultHeaders)
         routing {
             get("/health") {
                 call.respondText(
@@ -27,14 +32,10 @@ fun main(args: Array<String>) {
             }
             // TODO endpoint test
             post("/jobs/autocomplete") {
-                val params = call.parameters
                 call.respondText(
-                        json.stringify(JobsAutocompleteEntry.serializer().list,
-                                JobsClient.autocomplete(
-                                        params["begins_with"] ?: "",
-                                        params["contains"] ?: "",
-                                        params["ends_with"] ?: ""
-                                )
+                        json.stringify(
+                                JobsAutocompleteEntry.serializer().list,
+                                JobsAutocompleteService().getAutocompleteResults(call.parameters)
                         ),
                         ContentType.Application.Json
                 )
@@ -43,14 +44,10 @@ fun main(args: Array<String>) {
 
             // TODO endpoint test
             post("/skills/autocomplete") {
-                val params = call.parameters
                 call.respondText(
-                        json.stringify(SkillsAutocompleteEntry.serializer().list,
-                                SkillsClient.autocomplete(
-                                        params["begins_with"] ?: "",
-                                        params["contains"] ?: "",
-                                        params["ends_with"] ?: ""
-                                )
+                        json.stringify(
+                                SkillsAutocompleteEntry.serializer().list,
+                                SkillsAutocompleteService().getAutocompleteResults(call.parameters)
                         ),
                         ContentType.Application.Json
                 )
@@ -59,5 +56,6 @@ fun main(args: Array<String>) {
         }
     }
     server.start(wait = true)
+
 }
 

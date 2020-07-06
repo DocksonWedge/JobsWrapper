@@ -4,6 +4,7 @@ This is an example project with a simple api to show off automated REST testing 
   * Ktor
   * Kotlinx
   * Maven
+  * Koin Dependency injection(maybe)
 * Test Framework 
   * Kotlin-test + JUnit5
   * RESTAssured

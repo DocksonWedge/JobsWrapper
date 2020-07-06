@@ -15,7 +15,7 @@
         <kotlin.version>1.3.72</kotlin.version>
         <junit.version>5.6.2</junit.version>
         <ktor.version>1.3.2</ktor.version>
-        <klaxon.version>5.2</klaxon.version>
+        <koin.version>2.1.6</koin.version>
         <cucumber.version>6.1.1</cucumber.version>
         <serialization.version>0.20.0</serialization.version>
     </properties>
@@ -78,6 +78,24 @@
             <groupId>io.ktor</groupId>
             <artifactId>ktor-client-apache</artifactId>
             <version>${ktor.version}</version>
+            <scope>compile</scope>
+        </dependency>
+        <dependency>
+            <groupId>org.koin</groupId>
+            <artifactId>koin-core</artifactId>
+            <version>${koin.version}</version>
+            <scope>compile</scope>
+        </dependency>
+        <dependency>
+            <groupId>org.koin</groupId>
+            <artifactId>koin-test</artifactId>
+            <version>${koin.version}</version>
+            <scope>compile</scope>
+        </dependency>
+        <dependency>
+            <groupId>org.koin</groupId>
+            <artifactId>koin-ktor</artifactId>
+            <version>${koin.version}</version>
             <scope>compile</scope>
         </dependency>
         <dependency>

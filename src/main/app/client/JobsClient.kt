@@ -20,26 +20,16 @@ import kotlinx.serialization.serializer
 
 private const val BASE_PATH = "/jobs"
 
-object JobsClient : BaseClient<JobsAutocompleteEntry>(basePath = BASE_PATH)  {
-
-    // TODO: Dependency injection?
-
-    private val BASE_URL = System.getenv("DATA_AT_WORK_URL")
-
-    private val client = HttpClient(Apache) {
-        install(JsonFeature) {
-            serializer = KotlinxSerializer()
-        }
-    }
+class JobsClient : BaseClient<JobsAutocompleteEntry>(basePath = BASE_PATH)  {
 
    //TODO - integration test
-   fun autocomplete(begins_with: String, contains: String, ends_with: String): List<JobsAutocompleteEntry> {
+   override fun autocomplete(begins_with: String, contains: String, ends_with: String): List<JobsAutocompleteEntry> {
+
         val param =
                 AutocompleteParams(begins_with, contains, ends_with)
                         .getEffectiveParam()
         return runBlocking {
             return@runBlocking client.get<List<JobsAutocompleteEntry>>(
-
                     urlString = "$BASE_URL$BASE_PATH/autocomplete",
                     block = {
                         parameter(param.first, param.second)

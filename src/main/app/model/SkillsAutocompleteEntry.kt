@@ -4,7 +4,7 @@ import kotlinx.serialization.Serializable
 
 @Serializable
 data class SkillsAutocompleteEntry(
-        val uuid: String,
+        override val uuid: String,
         val normalized_skill_name: String,
-        val suggestion: String
-)
+        override val suggestion: String
+) : AutocompleteEntry
