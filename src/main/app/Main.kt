@@ -3,6 +3,7 @@ package app
 
 import app.client.JobsClient
 import app.client.SkillsClient
+import app.model.FirstResult
 import app.model.JobsAutocompleteEntry
 import io.ktor.application.*
 import io.ktor.http.*
@@ -12,6 +13,7 @@ import io.ktor.server.engine.*
 import io.ktor.server.netty.*
 import app.model.Health
 import app.model.SkillsAutocompleteEntry
+import app.service.FirstResultService
 import app.service.JobsAutocompleteService
 import app.service.SkillsAutocompleteService
 import io.ktor.features.DefaultHeaders
@@ -48,6 +50,17 @@ fun main(args: Array<String>) {
                         json.stringify(
                                 SkillsAutocompleteEntry.serializer().list,
                                 SkillsAutocompleteService().getAutocompleteResults(call.parameters)
+                        ),
+                        ContentType.Application.Json
+                )
+
+            }
+            // TODO endpoint test
+            post("/first-result") {
+                call.respondText(
+                        json.stringify(
+                                FirstResult.serializer(),
+                                FirstResultService().getFirstResult(call.parameters)
                         ),
                         ContentType.Application.Json
                 )
