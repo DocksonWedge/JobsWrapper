@@ -1,5 +1,6 @@
 package app.service
 
+import app.enum.ResultType
 import app.model.AutocompleteEntry
 import app.model.FirstResult
 import app.model.JobsAutocompleteEntry
@@ -23,10 +24,10 @@ class FirstResultService {
 
         val job = transformAutocompleteEntry(jobs[0])
         val skill = transformAutocompleteEntry(skills[0])
-        if (job.normalized_title <= skill.normalized_title){
-            return job
+        return if (job.normalized_title <= skill.normalized_title){
+            job
         } else {
-            return skill
+            skill
         }
      }
     // TODO use lambdas for builders? https://kotlinlang.org/docs/reference/lambdas.html
@@ -34,16 +35,18 @@ class FirstResultService {
     private inline fun transformAutocompleteEntry(entry: JobsAutocompleteEntry) : FirstResult{
         var result = transformAutocompleteEntry(entry as AutocompleteEntry)
         result.normalized_title = entry.normalized_job_title
+        result.type = ResultType.JOB
         return result
     }
     // TODO unit test
     private inline fun transformAutocompleteEntry(entry: SkillsAutocompleteEntry) : FirstResult{
         var result = transformAutocompleteEntry(entry as AutocompleteEntry)
         result.normalized_title = entry.normalized_skill_name
+        result.type = ResultType.SKILL
         return result
     }
     // TODO unit test
     private inline fun transformAutocompleteEntry(entry: AutocompleteEntry): FirstResult {
-        return FirstResult("",entry.uuid, entry.suggestion)
+        return FirstResult("",entry.uuid, entry.suggestion, ResultType.JOB)
     }
 }

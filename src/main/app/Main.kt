@@ -32,6 +32,7 @@ fun main(args: Array<String>) {
                         ContentType.Application.Json
                 )
             }
+            // These are posts to allow for testing different types, they should really be GETs
             // TODO endpoint test
             post("/jobs/autocomplete") {
                 call.respondText(
@@ -56,7 +57,7 @@ fun main(args: Array<String>) {
 
             }
             // TODO endpoint test
-            post("/first-result") {
+            get("/firstresult") {
                 call.respondText(
                         json.stringify(
                                 FirstResult.serializer(),
