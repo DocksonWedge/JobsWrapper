@@ -1,19 +1,16 @@
 package app.client
 
-import app.model.AutocompleteParams
-import app.model.JobsAutocompleteEntry
-import app.model.SkillsAutocompleteEntry
-import io.ktor.client.*
-import io.ktor.client.engine.apache.Apache
-import io.ktor.client.features.json.JsonFeature
-import io.ktor.client.features.json.serializer.KotlinxSerializer
+import app.model.param.AutocompleteParams
+import app.model.client.RelatedJobClientResponse
+import app.model.response.SkillsAutocompleteEntry
 import io.ktor.client.request.get
 import io.ktor.client.request.parameter
 import kotlinx.coroutines.runBlocking
 
-private const val BASE_PATH = "/skills"
 
-class SkillsClient : BaseClient<SkillsAutocompleteEntry>(basePath = BASE_PATH) {
+class SkillsClient : BaseClient<SkillsAutocompleteEntry>() {
+
+    override val BASE_PATH = "/skills"
 
     //TODO - integration test
     override fun autocomplete(begins_with: String, contains: String, ends_with: String): List<SkillsAutocompleteEntry> {
@@ -29,4 +26,5 @@ class SkillsClient : BaseClient<SkillsAutocompleteEntry>(basePath = BASE_PATH) {
             )
         }
     }
+
 }

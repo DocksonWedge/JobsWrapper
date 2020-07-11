@@ -1,10 +1,7 @@
 package app.service
 
-import app.client.BaseClient
 import app.client.JobsClient
-import app.model.AutocompleteEntry
-import app.model.JobsAutocompleteEntry
-import io.ktor.http.Parameters
+import app.model.response.JobsAutocompleteEntry
 import org.koin.dsl.module
 
 val jobsAutocompleteModule = module {

@@ -6,7 +6,7 @@ This is an example project with a simple api to show off automated REST testing 
   * Maven
 * Test Framework 
   * Kotlin-test + JUnit5
-  * RESTAssured
+  * RESTAssured or just use ktor + assertJ?
   * Spek for BDD
   
 To Add:

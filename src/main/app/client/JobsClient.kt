@@ -1,26 +1,15 @@
 package app.client
 
-import app.model.AutocompleteEntry
-import app.model.JobsAutocompleteEntry
-import app.model.AutocompleteParams
-import app.model.SkillsAutocompleteEntry
-import io.ktor.client.*
-import io.ktor.client.engine.apache.Apache
-import io.ktor.client.features.json.JsonFeature
-import io.ktor.client.features.json.serializer.KotlinxSerializer
+import app.model.param.AutocompleteParams
+import app.model.client.RelatedJobClientResponse
+import app.model.response.JobsAutocompleteEntry
 import io.ktor.client.request.get
 import io.ktor.client.request.parameter
 import kotlinx.coroutines.runBlocking
-import kotlinx.serialization.json.Json
-import kotlinx.serialization.modules.SerializersModule
-import kotlinx.serialization.modules.getContextual
-import kotlinx.serialization.modules.serializersModule
-import kotlinx.serialization.serializer
 
 
-private const val BASE_PATH = "/jobs"
-
-class JobsClient : BaseClient<JobsAutocompleteEntry>(basePath = BASE_PATH)  {
+class JobsClient : BaseClient<JobsAutocompleteEntry>()  {
+    override val BASE_PATH = "/jobs"
 
    //TODO - integration test
    override fun autocomplete(begins_with: String, contains: String, ends_with: String): List<JobsAutocompleteEntry> {
@@ -37,4 +26,5 @@ class JobsClient : BaseClient<JobsAutocompleteEntry>(basePath = BASE_PATH)  {
             )
         }
     }
+
 }

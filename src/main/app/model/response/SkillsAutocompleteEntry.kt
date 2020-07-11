@@ -1,12 +1,10 @@
-package app.model
+package app.model.response
 
 import kotlinx.serialization.Serializable
 
 @Serializable
-data class JobsAutocompleteEntry (
-        val parent_uuid: String,
-        val normalized_job_title: String,
+data class SkillsAutocompleteEntry(
         override val uuid: String,
+        val normalized_skill_name: String,
         override val suggestion: String
 ) : AutocompleteEntry
-

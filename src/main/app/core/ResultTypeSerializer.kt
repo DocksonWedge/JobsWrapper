@@ -8,11 +8,11 @@ import kotlinx.serialization.internal.StringDescriptor
 object ResultTypeSerializer {
 
     override fun deserialize(decoder: Decoder): ResultType {
-        return ResultType.valueOf(decoder.decodeString().toLowerCase())
+        return ResultType.valueOf(decoder.decodeString().toUpperCase())
     }
 
     override fun serialize(encoder: Encoder, value: ResultType) {
-        encoder.encodeString(value.type.toLowerCase())
+        encoder.encodeString(value.name.toLowerCase())
     }
 
     override val descriptor: SerialDescriptor

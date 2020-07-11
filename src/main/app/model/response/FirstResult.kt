@@ -1,7 +1,6 @@
-package app.model
+package app.model.response
 
 import app.core.ResultTypeSerializer
-import app.core.UUIDSerializer
 import app.enum.ResultType
 import kotlinx.serialization.Serializable
 

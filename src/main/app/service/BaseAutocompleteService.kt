@@ -1,8 +1,7 @@
 package app.service
 
 import app.client.BaseClient
-import app.client.JobsClient
-import app.model.AutocompleteEntry
+import app.model.response.AutocompleteEntry
 import io.ktor.http.Parameters
 
 abstract class BaseAutocompleteService<T>(val client: BaseClient<T> )  where T : AutocompleteEntry {

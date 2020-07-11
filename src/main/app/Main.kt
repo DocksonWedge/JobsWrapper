@@ -1,20 +1,16 @@
 package app
 
 
-import app.client.JobsClient
-import app.client.SkillsClient
-import app.model.FirstResult
-import app.model.JobsAutocompleteEntry
+import app.model.response.*
 import io.ktor.application.*
 import io.ktor.http.*
 import io.ktor.response.*
 import io.ktor.routing.*
 import io.ktor.server.engine.*
 import io.ktor.server.netty.*
-import app.model.Health
-import app.model.SkillsAutocompleteEntry
 import app.service.FirstResultService
 import app.service.JobsAutocompleteService
+import app.service.RelatedJobService
 import app.service.SkillsAutocompleteService
 import io.ktor.features.DefaultHeaders
 import kotlinx.serialization.builtins.list
@@ -57,7 +53,7 @@ fun main(args: Array<String>) {
 
             }
             // TODO endpoint test
-            get("/firstresult") {
+            get("/first_result") {
                 call.respondText(
                         json.stringify(
                                 FirstResult.serializer(),
@@ -65,8 +61,18 @@ fun main(args: Array<String>) {
                         ),
                         ContentType.Application.Json
                 )
-
             }
+            //TODO - Test comparing to actual response from DAW
+            get("/related_jobs"){
+                call.respondText(
+                        json.stringify(
+                                RelatedJobResponseEntry.serializer().list,
+                                RelatedJobService().getRelatedJobs(call.parameters)
+                        ),
+                        ContentType.Application.Json
+                )
+            }
+
         }
     }
     server.start(wait = true)
