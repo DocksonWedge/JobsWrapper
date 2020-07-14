@@ -12,7 +12,11 @@ import app.service.FirstResultService
 import app.service.JobsAutocompleteService
 import app.service.RelatedJobService
 import app.service.SkillsAutocompleteService
+import io.ktor.client.features.ClientRequestException
+import io.ktor.client.features.ServerResponseException
 import io.ktor.features.DefaultHeaders
+import io.ktor.features.StatusPages
+import io.ktor.util.rootCause
 import kotlinx.serialization.builtins.list
 import kotlinx.serialization.json.*
 
@@ -21,6 +25,15 @@ fun main(args: Array<String>) {
     val json = Json(JsonConfiguration.Stable)
     val server = embeddedServer(Netty, port = 8080) {
         install(DefaultHeaders)
+        install(StatusPages) {
+            exception<ClientRequestException> { cause ->
+                call.respond( cause.response.status )
+            }
+            // TODO -> verify with mocks we correctly forward 5** errors!
+            exception<ServerResponseException> { cause ->
+                call.respond( cause.response.status )
+            }
+        }
         routing {
             get("/health") {
                 call.respondText(
@@ -40,7 +53,7 @@ fun main(args: Array<String>) {
                 )
 
             }
-
+            // TODO return 201
             // TODO endpoint test
             post("/skills/autocomplete") {
                 call.respondText(

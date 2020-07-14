@@ -6,6 +6,7 @@ import app.model.client.RelatedJobClientResponse
 import app.model.response.SkillsAutocompleteEntry
 import io.ktor.client.HttpClient
 import io.ktor.client.engine.apache.Apache
+import io.ktor.client.features.*
 import io.ktor.client.features.json.JsonFeature
 import io.ktor.client.features.json.serializer.KotlinxSerializer
 import io.ktor.client.request.get

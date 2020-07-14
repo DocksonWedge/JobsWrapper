@@ -21,7 +21,7 @@ class FirstResultService {
     }
     // TODO unit test
     private fun findAlphaFirst(jobs: List<JobsAutocompleteEntry>, skills: List<SkillsAutocompleteEntry>)  : FirstResult {
-
+        // TODO use async for double call?
         val job = transformAutocompleteEntry(jobs[0])
         val skill = transformAutocompleteEntry(skills[0])
         return if (job.normalized_title <= skill.normalized_title){
