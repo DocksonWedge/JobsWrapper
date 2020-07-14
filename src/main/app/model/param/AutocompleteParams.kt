@@ -1,7 +1,7 @@
 package app.model.param
 
 class AutocompleteParams(private val begins_with: String, private val contains: String, private val ends_with: String) {
-    // TODO - Unit Test
+
     fun getEffectiveParam(): Pair<String, String> {
         return when {
             begins_with != "" ->
