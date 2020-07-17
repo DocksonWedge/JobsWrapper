@@ -104,6 +104,9 @@
     <orderEntry type="library" scope="TEST" name="Maven: org.junit.jupiter:junit-jupiter-engine:5.6.2" level="project" />
     <orderEntry type="library" scope="TEST" name="Maven: org.junit.platform:junit-platform-engine:1.6.2" level="project" />
     <orderEntry type="library" scope="TEST" name="Maven: org.spekframework.spek2:spek-dsl-jvm:2.0.9" level="project" />
+    <orderEntry type="library" scope="TEST" name="Maven: org.spekframework.spek2:spek-runner-junit5:2.0.9" level="project" />
+    <orderEntry type="library" scope="TEST" name="Maven: org.spekframework.spek2:spek-runtime-jvm:2.0.9" level="project" />
+    <orderEntry type="library" scope="TEST" name="Maven: io.github.classgraph:classgraph:4.8.37" level="project" />
     <orderEntry type="library" scope="TEST" name="Maven: io.rest-assured:rest-assured:4.3.0" level="project" />
     <orderEntry type="library" scope="TEST" name="Maven: org.codehaus.groovy:groovy:3.0.2" level="project" />
     <orderEntry type="library" scope="TEST" name="Maven: org.codehaus.groovy:groovy-xml:3.0.2" level="project" />
