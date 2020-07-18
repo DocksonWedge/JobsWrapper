@@ -1,6 +1,12 @@
 package app.model.param
 
-class AutocompleteParams(private val begins_with: String, private val contains: String, private val ends_with: String) {
+import kotlinx.serialization.Serializable
+
+@Serializable
+class AutocompleteParams(
+        private val begins_with: String,
+        private val contains: String,
+        private val ends_with: String) {
 
     fun getEffectiveParam(): Pair<String, String> {
         return when {

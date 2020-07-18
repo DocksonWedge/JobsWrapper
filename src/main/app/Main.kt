@@ -42,6 +42,7 @@ fun main(args: Array<String>) {
                 )
             }
             // These are posts to allow for testing different types, they should really be GETs
+            //TODO don't return 500 for no request body
             // TODO endpoint test
             post("/jobs/autocomplete") {
                 call.respondText(
