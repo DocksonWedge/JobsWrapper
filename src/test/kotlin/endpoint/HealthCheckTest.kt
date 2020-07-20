@@ -1,23 +1,23 @@
 package endpoint
 
 import core.BaseEndpointTest
-import io.restassured.RestAssured
 import io.restassured.RestAssured.get
-import org.spekframework.spek2.Spek
-import org.spekframework.spek2.style.specification.describe
+import kotlin.random.Random
 
-
-object HealthCheckTest : BaseEndpointTest({
+//TODO running multiple times?
+object HealthCheckTest : BaseEndpointTest("/heatlh", {
     //TODO investigate?
     //RestAssured.rootPath
     //TODO why doesn't output show when passing? Works when running all tests, but not individually.
-    describe("Working healthcheck") {
-
+    "Working healthcheck" {
+        println("start HealthCheckTest")
         var response = get("$BASE_URL/health")
 
-        it("Receives a 'success' response") {
+        "Receives a 'success' response" {
             response.then().assertThat()
                     .statusCode(200)
         }
+        Thread.sleep(Random.nextLong(1000))
+        println("end HealthCheckTest")
     }
 })
