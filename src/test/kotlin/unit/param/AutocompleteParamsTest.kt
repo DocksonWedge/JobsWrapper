@@ -4,26 +4,15 @@ import app.model.param.AutocompleteParams
 import io.kotest.core.spec.style.StringSpec
 import io.kotest.property.Exhaustive
 import io.kotest.property.exhaustive.collection
-import io.kotest.property.exhaustive.ints
 import io.kotest.property.forAll
-import org.junit.jupiter.api.Assertions
-import org.junit.jupiter.api.DynamicTest
-import org.junit.jupiter.api.TestFactory
-import kotlin.random.Random
 import kotlin.test.asserter
 
 
 class AutocompleteParamsTest() : StringSpec({
 
+    // ----------- property based test ------------
 
-    "String size" {
-        forAll<String, String>(5) { a, b ->
-            println("attempt: a:$a b:$b")
-            (a + b).length == a.length + b.length
-        }
-    }
-
-    "Effective parameter selection"{
+    "Autocomplete parameters always use the first non-empty value"{
         forAll(
                 Exhaustive.collection(listOf(
                         "",
@@ -31,67 +20,53 @@ class AutocompleteParamsTest() : StringSpec({
                         "~`!@#$%^&*()_+-=1234567890{}[]|\\:\"';:<>?,./")),
                 Exhaustive.collection(listOf(
                         "",
-                        " ",
+                        "\n",
                         "assistant")),
                 Exhaustive.collection(listOf(
                         "",
-                        " ",
+                        "   ",
                         "the quick brown fox jumps over the lazy dog")))
         { begins_with, contains, ends_with ->
             val result = AutocompleteParams(begins_with, contains, ends_with).getEffectiveParam()
             // return first non-null
-            //TODO hmmm.... we just re-wrote the prod function...
+            //TODO hmmm.... did we almost just re-write the prod function...
             when {
                 begins_with != "" -> {
-                    asserter.assertTrue(
-                            "parameter name expected begins_with received ${result.first} , " +
-                                    "parameter value expected $begins_with recieved ${result.second}",
-                            result.first == "begins_with" && result.second == begins_with)
+                    assertParams(result.first, "begins_with", result.second, begins_with)
                 }
                 contains != "" -> {
-                    result.first == "contains" && result.second == contains
+                    assertParams(result.first, "contains", result.second, contains)
                 }
                 ends_with != "" -> {
-                    result.first == "ends_with" && result.second == ends_with
+                    assertParams(result.first, "ends_with", result.second, ends_with)
                 }
                 else -> {
-                    result.first == "begins_with" && result.second == ""
+                    assertParams(result.first, "ends_with", result.second, ends_with)
                 }
             }
             true
         }
     }
-}) {
 
+    // ----------- static style test ------------
 
-    //TODO remove?
-    @TestFactory
-    fun getEffectiveParamTest() = listOf(
-            AutocompleteParams("assistant", "build", "cart")
-                    to ("begins_with" to "assistant"),
-            AutocompleteParams("", "build", "cart")
-                    to ("contains" to "build"),
-            AutocompleteParams("", "", "cart")
-                    to ("ends_with" to "cart"),
-            AutocompleteParams("", "", "")
-                    to ("begins_with" to ""),
-            AutocompleteParams(" ", "", "")
-                    to ("begins_with" to " "),
-            AutocompleteParams("assistant", "build", "")
-                    to ("begins_with" to "assistant"),
-            AutocompleteParams("", "the quick brown fox jumps over the lazy dog", "")
-                    to ("contains" to "the quick brown fox jumps over the lazy dog"),
-            AutocompleteParams("~`!@#$%^&*()_+-=1234567890{}[]|\\:\"';:<>?,./", "", "cart")
-                    to ("begins_with" to "~`!@#\$%^&*()_+-=1234567890{}[]|\\:\"';:<>?,./")
-    ).map { (params, expectedVal) ->
-        DynamicTest.dynamicTest(
-                "When I pass $params to JobsWrapper " +
-                        "then I pass $expectedVal to the DAW api.")
-        {
-            println("start $params$expectedVal")
-            Assertions.assertEquals(expectedVal, params.getEffectiveParam())
-            Thread.sleep(Random.nextLong(1000))
-            println("end $params$expectedVal")
-        }
+    "Autocomplete given all empty strings for params"{
+        asserter.assertEquals("should return ends_with",
+                "ends_with" to "", AutocompleteParams("", "", "").getEffectiveParam())
     }
+    "Autocomplete given all non-empty strings for params"{
+        asserter.assertEquals("should return begins_with",
+                "begins_with" to "a", AutocompleteParams("a", "b", "c").getEffectiveParam())
+    }
+    "Autocomplete given only one non-empty string"{
+        asserter.assertEquals("should return contains",
+                "contains" to "b", AutocompleteParams("", "b", "").getEffectiveParam())
+    }
+})
+
+fun assertParams(actualName: String, expectedName: String, actualValue: String, expectedValue: String) {
+    asserter.assertEquals("Parameter selected by AutocompleteParams was wrong.",
+            actualName, expectedName)
+    asserter.assertEquals("Parameter VALUE returned from AutocompleteParams was wrong.",
+            actualValue, expectedValue)
 }
