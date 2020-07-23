@@ -11,7 +11,7 @@ import kotlin.test.asserter
 class AutocompleteParamsTest() : StringSpec({
 
     // ----------- property based test ------------
-
+    //TODO make it so we expect exceptions for autocomplete params
     "Autocomplete parameters always use the first non-empty value"{
         forAll(
                 Exhaustive.collection(listOf(

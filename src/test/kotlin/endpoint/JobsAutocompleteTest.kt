@@ -2,43 +2,105 @@ package endpoint
 
 import core.BaseEndpointTest
 import core.model.AutocompleteUtils
+import io.kotest.property.Exhaustive
+import io.kotest.property.exhaustive.collection
+import io.kotest.property.forAll
 import io.restassured.RestAssured.given
-import kotlinx.serialization.json.Json
-import kotlinx.serialization.json.JsonConfiguration
+import org.hamcrest.CoreMatchers.*
 import kotlin.random.Random
-import org.hamcrest.CoreMatchers.startsWith
 import org.hamcrest.Matchers.hasLength
 
 
-object JobsAutocompleteTest
-    : BaseEndpointTest(
-        "/jobs/autocomplete", {
+class JobsAutocompleteTest
+    : BaseEndpointTest({
+    val url = "$BASE_URL/jobs/autocomplete"
 
-    val json = Json(JsonConfiguration.Stable)
-
-    "Retrieves jobs autocomplete with begins_with == assistant" {
-        println("start JobsAutocompleteTest")
+    "Sanity: Retrieves jobs autocomplete with begins_with == assistant" {
         //TODO why doesn't output show when passing? Works when running all tests, but not individually.
 
+        var response = given()
+                .queryParams(
+                        AutocompleteUtils.makeParams("assistant", "b", "c")
+                )
+                .post("$url")
+
+        response.then().assertThat()
+                .statusCode(200)
+                .and()
+                .body("[1].normalized_job_title", startsWith("a"))
+                .body("[7].suggestion", startsWith("Assistant"))
+                .body("[12].parent_uuid", hasLength(32))
+                .body("[9].uuid", hasLength(32))
+    }
+
+
+    //TODO - Speed this up how?
+    val invalidParams = listOf(
+            "abcedfg",
+            "~`!@#\$%^&*()_+-=1234567890{}[]|\\:\"';:<>?,./",
+            "the quick brown fox jumps over the lazy dog")
+    val validParams = listOf(
+            "bank",
+            "assistant",
+            "manager")
+    //TODO why doing 164 attempts?
+    "Property: Autocompletes the first given parameter to real job names. If not found returns all jobs." {
+        forAll(
+                Exhaustive.collection(listOf(
+                        "",
+                        invalidParams[1])),
+                Exhaustive.collection(listOf(
+                        "   ",
+                        validParams[1])),
+                Exhaustive.collection(listOf(
+                        "NULL",
+                        validParams[2])))
+        { begins_with, contains, ends_with ->
 
             var response = given()
                     .queryParams(
-                            AutocompleteUtils.makeParams("assistant", "b", "c")
+                            AutocompleteUtils.makeParams(begins_with, contains, ends_with)
                     )
-                    .post("$BASE_URL/jobs/autocomplete")
+                    .post("$url")
 
-                "We receive a list of jobs"{
-                    response.then().assertThat()
-                            .statusCode(200)
-                            .and()
-                            .body("[1].normalized_job_title", startsWith("a"))
-                            .body("[7].suggestion", startsWith("Assistant"))
-                            .body("[12].parent_uuid", hasLength(32))
-                            .body("[9].uuid", hasLength(32))
+            val rowToCheck = Random.nextInt(10)
+
+            when {
+                hasParamValue(begins_with) -> {
+                    if (validParams.contains(begins_with)) {
+                        response.then().assertThat().statusCode(200)
+                                .body("[$rowToCheck].normalized_job_title", startsWith(begins_with))
+                    } else {
+                        response.then().assertThat().statusCode(404)
+                    }
                 }
+                hasParamValue(contains) -> {
+                    if (validParams.contains(contains)) {
+                        response.then().assertThat().statusCode(200)
+                                .body("[$rowToCheck].normalized_job_title", containsString(contains))
+                    } else {
+                        response.then().assertThat().statusCode(404)
+                    }
+                }
+                hasParamValue(ends_with) -> {
+                    if (validParams.contains(ends_with)) {
+                        response.then().assertThat().statusCode(200)
+                                .body("[$rowToCheck].normalized_job_title", endsWith(ends_with))
+                    } else {
+                        response.then().assertThat().statusCode(404)
+                    }
+                }
+                else -> {
+                    response.then().assertThat().statusCode(400)
+                }
+            }
 
-            Thread.sleep(Random.nextLong(1000))
-            println("end JobsAutocompleteTest")
-
+            true
+        }
     }
+
 })
+
+fun hasParamValue(value: String): Boolean {
+    return value.isNotBlank() && value != "NULL"
+}

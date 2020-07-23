@@ -19,6 +19,7 @@ import io.ktor.features.StatusPages
 import io.ktor.util.rootCause
 import kotlinx.serialization.builtins.list
 import kotlinx.serialization.json.*
+import java.lang.IllegalArgumentException
 
 
 fun main(args: Array<String>) {
@@ -26,6 +27,9 @@ fun main(args: Array<String>) {
     val server = embeddedServer(Netty, port = 8080) {
         install(DefaultHeaders)
         install(StatusPages) {
+            exception<IllegalArgumentException> { cause ->
+                call.respond(HttpStatusCode.BadRequest, cause.localizedMessage )
+            }
             exception<ClientRequestException> { cause ->
                 call.respond( cause.response.status )
             }
@@ -34,6 +38,7 @@ fun main(args: Array<String>) {
                 call.respond( cause.response.status )
             }
         }
+
         routing {
             get("/health") {
                 call.respondText(

@@ -7,14 +7,17 @@ import kotlinx.serialization.json.Json
 import kotlinx.serialization.json.JsonConfiguration
 import org.hamcrest.core.StringContains
 
-object AutocompleteUtils{
+object AutocompleteUtils {
     private val json = Json(JsonConfiguration.Stable)
 
     fun makeParams(begins_with: String, contains: String, ends_with: String): Map<String, String> {
-        //TODO how to map this without hardcoding names
-        return mapOf("begins_with" to begins_with,
-                "contains" to contains,
-                "ends_with" to ends_with)
+        var params = HashMap<String, String>()
+        when {
+            begins_with != "NULL" -> params["begins_with"] = begins_with
+            contains != "NULL" -> params["contains"] = contains
+            ends_with != "NULL" -> params["ends_with"] = ends_with
+        }
+        return params
     }
 }
 
