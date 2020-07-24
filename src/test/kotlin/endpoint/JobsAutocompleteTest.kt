@@ -37,7 +37,6 @@ class JobsAutocompleteTest
     }
 
 
-    //TODO - Speed this up how?
     val invalidParams = listOf(
             "abcedfg",
             "~`!@#\$%^&*()_+-=1234567890{}[]|\\:\"';:<>?,./",
@@ -46,7 +45,7 @@ class JobsAutocompleteTest
             "bank",
             "assistant",
             "manager")
-    //TODO why doing 164 attempts?
+
     "Property: Autocompletes the first given parameter to real job names. If not found returns all jobs." {
         forAll(3, //PropTestConfig(0) leave this low to avoid hammering use prop test config for seed
                 Exhaustive.collection(listOf(
