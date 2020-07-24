@@ -2,9 +2,14 @@ package unit.param
 
 import app.model.param.AutocompleteParams
 import io.kotest.core.spec.style.StringSpec
+import io.kotest.property.Arb
 import io.kotest.property.Exhaustive
+import io.kotest.property.PropTestConfig
+import io.kotest.property.arbitrary.element
 import io.kotest.property.exhaustive.collection
 import io.kotest.property.forAll
+import org.junit.jupiter.api.assertThrows
+import java.lang.IllegalArgumentException
 import kotlin.test.asserter
 
 
@@ -13,35 +18,44 @@ class AutocompleteParamsTest() : StringSpec({
     // ----------- property based test ------------
     //TODO make it so we expect exceptions for autocomplete params
     "Autocomplete parameters always use the first non-empty value"{
-        forAll(
+        forAll(30,
                 Exhaustive.collection(listOf(
                         "",
                         " ",
                         "~`!@#$%^&*()_+-=1234567890{}[]|\\:\"';:<>?,./")),
-                Exhaustive.collection(listOf(
+                Arb.element(listOf(
                         "",
                         "\n",
                         "assistant")),
-                Exhaustive.collection(listOf(
+                Arb.element(listOf(
                         "",
                         "   ",
                         "the quick brown fox jumps over the lazy dog")))
         { begins_with, contains, ends_with ->
-            val result = AutocompleteParams(begins_with, contains, ends_with).getEffectiveParam()
+
+            var error = false
+            var result: Pair<String, String>
+            try {
+                 result = AutocompleteParams(begins_with, contains, ends_with).getEffectiveParam()
+            }catch(e: IllegalArgumentException){
+                error = true
+                result = "" to ""
+            }
+
             // return first non-null
             //TODO hmmm.... did we almost just re-write the prod function...
             when {
-                begins_with != "" -> {
+                begins_with.isNotBlank() -> {
                     assertParams(result.first, "begins_with", result.second, begins_with)
                 }
-                contains != "" -> {
+                contains.isNotBlank() -> {
                     assertParams(result.first, "contains", result.second, contains)
                 }
-                ends_with != "" -> {
+                ends_with.isNotBlank() -> {
                     assertParams(result.first, "ends_with", result.second, ends_with)
                 }
                 else -> {
-                    assertParams(result.first, "ends_with", result.second, ends_with)
+                    asserter.assertTrue("Should have an error when all blank params", error)
                 }
             }
             true
@@ -66,7 +80,7 @@ class AutocompleteParamsTest() : StringSpec({
 
 fun assertParams(actualName: String, expectedName: String, actualValue: String, expectedValue: String) {
     asserter.assertEquals("Parameter selected by AutocompleteParams was wrong.",
-            actualName, expectedName)
+            expectedName, actualName)
     asserter.assertEquals("Parameter VALUE returned from AutocompleteParams was wrong.",
-            actualValue, expectedValue)
+            expectedValue, actualValue)
 }

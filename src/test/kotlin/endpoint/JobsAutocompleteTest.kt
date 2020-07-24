@@ -2,7 +2,10 @@ package endpoint
 
 import core.BaseEndpointTest
 import core.model.AutocompleteUtils
+import io.kotest.property.Arb
 import io.kotest.property.Exhaustive
+import io.kotest.property.PropTestConfig
+import io.kotest.property.arbitrary.element
 import io.kotest.property.exhaustive.collection
 import io.kotest.property.forAll
 import io.restassured.RestAssured.given
@@ -45,15 +48,18 @@ class JobsAutocompleteTest
             "manager")
     //TODO why doing 164 attempts?
     "Property: Autocompletes the first given parameter to real job names. If not found returns all jobs." {
-        forAll(
+        forAll(3, //PropTestConfig(0) leave this low to avoid hammering use prop test config for seed
                 Exhaustive.collection(listOf(
                         "",
-                        invalidParams[1])),
-                Exhaustive.collection(listOf(
+                        validParams[0],
+                        invalidParams[0])),
+                Arb.element(listOf(
                         "   ",
+                        invalidParams[1],
                         validParams[1])),
-                Exhaustive.collection(listOf(
+                Arb.element(listOf(
                         "NULL",
+                        invalidParams[2],
                         validParams[2])))
         { begins_with, contains, ends_with ->
 
