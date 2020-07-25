@@ -1,0 +1,22 @@
+{
+  "port": 8090,
+  "protocol": "http",
+  "stubs": [
+  {
+    "responses": [
+    { "is": { "statusCode": 400 }}
+    ],
+    "predicates": [{
+                     "equals": {
+                       "path": "/test",
+                       "method": "POST"
+                     }
+                   }]
+  },
+  {
+    "responses": [{
+                    "is": { "statusCode": 404 }
+                  }]
+  }
+  ]
+}
