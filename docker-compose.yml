@@ -1,0 +1,11 @@
+version: '3.8'
+services:
+  mocks:
+    image: mountebank:2.2.1
+    ports:
+      - "2525:2525"
+      - "8090:8090"
+    command: "--configfile /mock/imposters.ejs --allowInjection mb start"
+    volumes:
+      - ./mock:/mock
+
