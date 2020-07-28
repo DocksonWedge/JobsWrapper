@@ -1,0 +1,17 @@
+version: '3.8'
+services:
+  mocks:
+    image: andyrbell/mountebank:2.2.1
+    ports:
+      - "2525:2525"
+      - "8090:8090"
+    command: "mb start --configfile /mock/imposters.ejs --allowInjection"
+    volumes:
+      - ./mock:/mock
+
+  jobswrapper:
+    extends:
+      file: docker-compose.local.yml
+      service: jobswrapper
+    environment:
+      - DATA_AT_WORK_URL = http://localhost:8090

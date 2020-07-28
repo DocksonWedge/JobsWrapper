@@ -1,11 +1,9 @@
 version: '3.8'
 services:
-  mocks:
+  jobswrapper:
     image: andyrbell/mountebank:2.2.1
-    ports:
-      - "2525:2525"
-      - "8090:8090"
-    command: "mb start --configfile /mock/imposters.ejs --allowInjection"
-    volumes:
-      - ./mock:/mock
-
+      ports:
+        - "8080:8080"
+      command: "mvn run"
+      volumes:
+        - ./build:/build

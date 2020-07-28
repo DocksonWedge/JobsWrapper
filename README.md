@@ -19,3 +19,9 @@ To Add:
 * Performance tests? (against mocks only)
 * Setup test deploy pipeline
 * output test results report for non-technical review
+
+To run(needs environment variables):
+mvn clean compile exec:java -Dexec.mainClass=app.MainKt
+
+To run(with all tests including endpoint that needs to be excluded):
+mvn clean compile exec:java -Dexec.mainClass=app.MainKt

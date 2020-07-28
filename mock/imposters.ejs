@@ -4,13 +4,17 @@
   "stubs": [
   {
     "responses": [
-    { "is": { "statusCode": 400 }}
+    { "is": {
+      "statusCode": 200,
+      "body":  <% include json/endpoint.json %>
+    }}
     ],
-    "predicates": [{
-                     "equals": {
-                       "path": "/test",
-                       "method": "POST"
-                     }
+    "predicates": [{"equals":
+                      {
+                        "path": "/jobs/autocomplete",
+                        "method": "GET",
+                        "query": { "begins_with": "assistant" }
+                      }
                    }]
   },
   {
