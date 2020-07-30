@@ -1,9 +1,0 @@
-version: '3.8'
-services:
-  jobswrapper:
-    image: andyrbell/mountebank:2.2.1
-      ports:
-        - "8080:8080"
-      command: "mvn run"
-      volumes:
-        - ./build:/build

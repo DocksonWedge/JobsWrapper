@@ -9,5 +9,4 @@ services:
     volumes:
       - ./target:/target
     environment:
-      - DATA_AT_WORK_URL=http://dawmock:8090
-
+      - DATA_AT_WORK_URL=http://api.dataatwork.org/v1

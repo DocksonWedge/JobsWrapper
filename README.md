@@ -1,16 +1,15 @@
 # JobsWrapper
 This is an example project with a simple api to show off automated REST testing in Kotlin. Using:
-* Production framework
+* **Production framework**
   * Ktor
   * Kotlinx
   * Maven
-* Test Framework 
+* **Test Framework**
   * Kotlin-test + JUnit5
   * use restassured for endpoint tests 
   * assertJ wanted for unit tests??
-  * Spek for BDD
   
-To Add:
+**To Add:**
 * Create CLI tools
 * Dockerize container and tests
 * jacoco for code coverage
@@ -23,5 +22,11 @@ To Add:
 To run(needs environment variables):
 mvn clean compile exec:java -Dexec.mainClass=app.MainKt
 
-To run(with all tests including endpoint that needs to be excluded):
+**To run(with all tests including endpoint that needs to be excluded):**
 mvn clean compile exec:java -Dexec.mainClass=app.MainKt
+
+**To build and package**
+mvn clean install -DskipTests
+
+**Starting local docker images, including mocks:**
+docker-compose -f docker-compose.local.yml -f docker-compose.mock.yml up

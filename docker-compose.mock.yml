@@ -1,0 +1,12 @@
+version: '3.8'
+services:
+  dawmock:
+    container_name: dawmock
+    image: andyrbell/mountebank:2.2.1
+    ports:
+      - "2525:2525"
+      - "8090:8090"
+    command: "mb start --configfile /mock/imposters.ejs --allowInjection"
+    volumes:
+      - ./mock:/mock
+
