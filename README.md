@@ -29,4 +29,4 @@ mvn clean compile exec:java -Dexec.mainClass=app.MainKt
 mvn clean install -DskipTests
 
 **Starting local docker images, including mocks:**
-docker-compose -f docker-compose.local.yml -f docker-compose.mock.yml up
+at the project root run `run_local.sh`

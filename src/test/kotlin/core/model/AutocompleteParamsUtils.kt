@@ -11,12 +11,11 @@ object AutocompleteUtils {
     private val json = Json(JsonConfiguration.Stable)
 
     fun makeParams(begins_with: String, contains: String, ends_with: String): Map<String, String> {
-        var params = HashMap<String, String>()
-        when {
-            begins_with != "NULL" -> params["begins_with"] = begins_with
-            contains != "NULL" -> params["contains"] = contains
-            ends_with != "NULL" -> params["ends_with"] = ends_with
-        }
+        val params = HashMap<String, String>()
+        if (begins_with != "NULL")  params["begins_with"] = begins_with
+        if (contains != "NULL") params["contains"] = contains
+        if (ends_with != "NULL") params["ends_with"] = ends_with
+
         return params
     }
 }

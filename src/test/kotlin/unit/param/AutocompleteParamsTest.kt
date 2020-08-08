@@ -4,12 +4,12 @@ import app.model.param.AutocompleteParams
 import io.kotest.core.spec.style.StringSpec
 import io.kotest.property.Arb
 import io.kotest.property.Exhaustive
-import io.kotest.property.PropTestConfig
 import io.kotest.property.arbitrary.element
 import io.kotest.property.exhaustive.collection
 import io.kotest.property.forAll
 import org.junit.jupiter.api.assertThrows
 import java.lang.IllegalArgumentException
+import kotlin.test.assertEquals
 import kotlin.test.asserter
 
 
@@ -63,10 +63,14 @@ class AutocompleteParamsTest() : StringSpec({
     }
 
     // ----------- static style test ------------
-
-    "Autocomplete given all empty strings for params"{
+    "Autocomplete given all empty strings"{
+        assertThrows<IllegalArgumentException> {
+            AutocompleteParams("", "", " ").getEffectiveParam()
+        }
+    }
+    "Autocomplete given all empty strings except ends_with"{
         asserter.assertEquals("should return ends_with",
-                "ends_with" to "", AutocompleteParams("", "", "").getEffectiveParam())
+                "ends_with" to "c", AutocompleteParams("", "", "c").getEffectiveParam())
     }
     "Autocomplete given all non-empty strings for params"{
         asserter.assertEquals("should return begins_with",

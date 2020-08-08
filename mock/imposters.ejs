@@ -2,28 +2,38 @@
   "port": 8090,
   "protocol": "http",
   "stubs": [
-  {
-    "responses": [
-    { "is": {
-      "statusCode": 200,
-      "headers":{
-        "Content-Type": "application/json"
-      },
-      "body":  <% include json/endpoint.json %>
-    }}
-    ],
-    "predicates": [{"equals":
-                      {
-                        "path": "/jobs/autocomplete",
-                        "method": "GET",
-                        "query": { "begins_with": "assistant" }
-                      }
-                   }]
-  },
-  {
-    "responses": [{
-                    "is": { "statusCode": 404 }
-                  }]
-  }
+    {
+      "responses": [
+        {
+          "is": {
+            "statusCode": 200,
+            "headers": {
+              "Content-Type": "application/json"
+            },
+            "body": <% include json/endpoint.json %>
+          }
+        }
+      ],
+      "predicates": [
+        {
+          "equals": {
+            "path": "/jobs/autocomplete",
+            "method": "GET",
+            "query": {
+              "begins_with": "assistant"
+            }
+          }
+        }
+      ]
+    },
+    {
+      "responses": [
+        {
+          "is": {
+            "statusCode": 404
+          }
+        }
+      ]
+    }
   ]
 }
