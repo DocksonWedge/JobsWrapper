@@ -90,7 +90,9 @@ private fun callAndAssertJobsAutocomplete(begins_with: String, contains: String,
     val response = given()
             .queryParams(AutocompleteUtils.makeParams(begins_with, contains, ends_with))
             .post(url)
-
+    println("test with begins_with: $begins_with - contains: $contains - ends_with: $ends_with")
+    println("Returned status: ${response.statusCode} - Response Body: ")
+    response.body().prettyPrint()
     val rowToCheck = Random.nextInt(10)
 
     when {

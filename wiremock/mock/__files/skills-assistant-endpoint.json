@@ -1,0 +1,908 @@
+[
+  {
+    "uuid": "6b6c3b02af23ff2d27132c94048daa86",
+    "suggestion": "Assistant Vice President (AVP)",
+    "normalized_job_title": "assistant vice president avp",
+    "parent_uuid": "a0cc5b003799d172211c33a9c14929dc"
+  },
+  {
+    "uuid": "8343ccc794821a5b1290ca97c7fc9d90",
+    "suggestion": "Assistant Farm Operations Manager",
+    "normalized_job_title": "assistant farm operations manager",
+    "parent_uuid": "09ee343efed5751cb9963217ad2e423e"
+  },
+  {
+    "uuid": "69d4638c837d168017b22b256e8ca2fc",
+    "suggestion": "Assistant Superintendent",
+    "normalized_job_title": "assistant superintendent",
+    "parent_uuid": "dba5edaa4f35301e0bff15aead446ab8"
+  },
+  {
+    "uuid": "5c5f5a40173901f3acfbc4179e718406",
+    "suggestion": "Assistant Dean",
+    "normalized_job_title": "assistant dean",
+    "parent_uuid": "6f733093f5064e537eff0c4db1288492"
+  },
+  {
+    "uuid": "1a102bdef9e6a20f692109a735c77847",
+    "suggestion": "Assistant Manager of Operations",
+    "normalized_job_title": "assistant manager of operations",
+    "parent_uuid": "945eaa86abc79374086b5dfc7295cf57"
+  },
+  {
+    "uuid": "d67122f08ebd0c252703da87fc00deba",
+    "suggestion": "Assistant Casino Shift Manager",
+    "normalized_job_title": "assistant casino shift manager",
+    "parent_uuid": "366ce2b56f0d8988221084d1d65c7a68"
+  },
+  {
+    "uuid": "3875cee8ac88723433e61f11a975734e",
+    "suggestion": "Assistant Property Manager",
+    "normalized_job_title": "assistant property manager",
+    "parent_uuid": "81574c9a4740a40b2f8fd32f953c3852"
+  },
+  {
+    "uuid": "ab58fdb01e16cce1eaab2b6b3d2cd372",
+    "suggestion": "Assistant Vice President, Investment Analysis",
+    "normalized_job_title": "assistant vice president investment analysis",
+    "parent_uuid": "f5825d460b68cfb89799b110f9b57d35"
+  },
+  {
+    "uuid": "40f27c6c5ab540fea2e8729baf686926",
+    "suggestion": "Assistant Director for Financial Literacy",
+    "normalized_job_title": "assistant director for financial literacy",
+    "parent_uuid": "a116caa33a8821518867f27c034ed0fa"
+  },
+  {
+    "uuid": "6ff36e9586553e17c9e1d3df34ef8202",
+    "suggestion": "Assistant Division Chief for Statistical Program Management",
+    "normalized_job_title": "assistant division chief for statistical program management",
+    "parent_uuid": "3ef8fdf0b53d301ce3f361a6fb0bf744"
+  },
+  {
+    "uuid": "5d5490d3d54476a3a625695a573a471b",
+    "suggestion": "Assistant County Engineer",
+    "normalized_job_title": "assistant county engineer",
+    "parent_uuid": "db034535c6a4111569df7165e640ce6b"
+  },
+  {
+    "uuid": "aa91413c11284694f36a83c978d3e6ff",
+    "suggestion": "Assistant Drafter",
+    "normalized_job_title": "assistant drafter",
+    "parent_uuid": "287f274efcce450efd532dd701e5e8ae"
+  },
+  {
+    "uuid": "7565f2813f6936ced3311f988f1dd76e",
+    "suggestion": "Assistant Manager Quality Management",
+    "normalized_job_title": "assistant manager quality management",
+    "parent_uuid": "4751f975c16158b9566dd65e088001e1"
+  },
+  {
+    "uuid": "447aeefbd821535363338eeb4d94d3f8",
+    "suggestion": "Assistant Surveyor",
+    "normalized_job_title": "assistant surveyor",
+    "parent_uuid": "4a9270b7b3661523b86770b7088c8f1a"
+  },
+  {
+    "uuid": "217d409e6aab3074fa04eccbe31bf0b7",
+    "suggestion": "Assistant Groundwater Engineer",
+    "normalized_job_title": "assistant groundwater engineer",
+    "parent_uuid": "29ec6967b6f4fe6a07c648f94effe563"
+  },
+  {
+    "uuid": "55a323c58f8d437b50d997e4656acdc6",
+    "suggestion": "Assistant Vice President, Assessment Solutions",
+    "normalized_job_title": "assistant vice president assessment solutions",
+    "parent_uuid": "8c1700a459ac2757faac2a04aa9bd278"
+  },
+  {
+    "uuid": "52c7a89d806960369c57a9f1fc7e9744",
+    "suggestion": "Assistant Oceanographer",
+    "normalized_job_title": "assistant oceanographer",
+    "parent_uuid": "bae768f2464d4c86f05659ce341b1628"
+  },
+  {
+    "uuid": "e039de6af4d0c9c48e2181407b037542",
+    "suggestion": "Assistant Health Educator",
+    "normalized_job_title": "assistant health educator",
+    "parent_uuid": "4692e9cb546aedb1b3158be740c7aec0"
+  },
+  {
+    "uuid": "a3db1d3ce06c3bd84a2f28743b5205e9",
+    "suggestion": "Assistant Director of Nutrition and Wellness Programs",
+    "normalized_job_title": "assistant director of nutrition and wellness programs",
+    "parent_uuid": "766c7fb6241e9af02f927f2e58221bc8"
+  },
+  {
+    "uuid": "c405549a2708c4bcbc1203241c254c17",
+    "suggestion": "Assistant Attorney General",
+    "normalized_job_title": "assistant attorney general",
+    "parent_uuid": "c3ff33846af8899b6089e6b9591b61b6"
+  },
+  {
+    "uuid": "9606f877f7e5ac2aa80f2c0fee4b9ccc",
+    "suggestion": "Assistant Corporation Counsel",
+    "normalized_job_title": "assistant corporation counsel",
+    "parent_uuid": "c3ff33846af8899b6089e6b9591b61b6"
+  },
+  {
+    "uuid": "ba6e50277c7480b41c35c21290487de7",
+    "suggestion": "Assistant Counsel",
+    "normalized_job_title": "assistant counsel",
+    "parent_uuid": "c3ff33846af8899b6089e6b9591b61b6"
+  },
+  {
+    "uuid": "810b7294d3350d94dc8046cee6f46b23",
+    "suggestion": "Assistant County Attorney",
+    "normalized_job_title": "assistant county attorney",
+    "parent_uuid": "c3ff33846af8899b6089e6b9591b61b6"
+  },
+  {
+    "uuid": "473c06ec4a440d40a103f77f142b72ba",
+    "suggestion": "Assistant District Attorney",
+    "normalized_job_title": "assistant district attorney",
+    "parent_uuid": "c3ff33846af8899b6089e6b9591b61b6"
+  },
+  {
+    "uuid": "e9bbd25e102ee5658392116eb94868c2",
+    "suggestion": "Assistant Federal Public Defender",
+    "normalized_job_title": "assistant federal public defender",
+    "parent_uuid": "c3ff33846af8899b6089e6b9591b61b6"
+  },
+  {
+    "uuid": "a3ed9f0df687513d24d4f8ffe71924a8",
+    "suggestion": "Assistant Prosecuting Attorney",
+    "normalized_job_title": "assistant prosecuting attorney",
+    "parent_uuid": "c3ff33846af8899b6089e6b9591b61b6"
+  },
+  {
+    "uuid": "a2736be717d91189aae449ea8e833f6f",
+    "suggestion": "Assistant Prosecutor",
+    "normalized_job_title": "assistant prosecutor",
+    "parent_uuid": "c3ff33846af8899b6089e6b9591b61b6"
+  },
+  {
+    "uuid": "99b59bcb27d063bc7b4ce27a10a8a934",
+    "suggestion": "Assistant Public Defender",
+    "normalized_job_title": "assistant public defender",
+    "parent_uuid": "c3ff33846af8899b6089e6b9591b61b6"
+  },
+  {
+    "uuid": "dff3fb83b1795e02ac9674d3d8e6fc77",
+    "suggestion": "Assistant State Attorney",
+    "normalized_job_title": "assistant state attorney",
+    "parent_uuid": "c3ff33846af8899b6089e6b9591b61b6"
+  },
+  {
+    "uuid": "de01ec53ea1b2c99d4a22e981a86fb2b",
+    "suggestion": "Assistant Paralegal",
+    "normalized_job_title": "assistant paralegal",
+    "parent_uuid": "2729e22b0b3d641f0f32f6bb616f62f1"
+  },
+  {
+    "uuid": "1e5eb02b1683032abd70e07b02826c19",
+    "suggestion": "Assistant Professor of Business",
+    "normalized_job_title": "assistant professor of business",
+    "parent_uuid": "9783ebd146cb9e0b64d51cc168b20010"
+  },
+  {
+    "uuid": "52801151e3a01b688fc3ff04e283c538",
+    "suggestion": "Assistant Professor of Mathematics",
+    "normalized_job_title": "assistant professor of mathematics",
+    "parent_uuid": "e5cae6769cdc72c8a500581583c2e31f"
+  },
+  {
+    "uuid": "6f06c924f8fc8aedc2b94180554db6b1",
+    "suggestion": "Assistant Professor of Biology",
+    "normalized_job_title": "assistant professor of biology",
+    "parent_uuid": "27d2c00408c1cc5452cd2c91ce80cdfd"
+  },
+  {
+    "uuid": "770d93e9c18b77ad18f46b56da945e82",
+    "suggestion": "Assistant Professor of Life Sciences",
+    "normalized_job_title": "assistant professor of life sciences",
+    "parent_uuid": "27d2c00408c1cc5452cd2c91ce80cdfd"
+  },
+  {
+    "uuid": "e86f186f871007d25bb40fde29376b19",
+    "suggestion": "Assistant Professor of Marine Biology",
+    "normalized_job_title": "assistant professor of marine biology",
+    "parent_uuid": "27d2c00408c1cc5452cd2c91ce80cdfd"
+  },
+  {
+    "uuid": "feec89d8021836780c32c69683b68654",
+    "suggestion": "Assistant Professor of Forestry",
+    "normalized_job_title": "assistant professor of forestry",
+    "parent_uuid": "e57affffa2ea82c64d881fe8bb6de209"
+  },
+  {
+    "uuid": "85174cedac5b533709937242601a0c59",
+    "suggestion": "Assistant Professor of Habitat Restoration Ecology",
+    "normalized_job_title": "assistant professor of habitat restoration ecology",
+    "parent_uuid": "e57affffa2ea82c64d881fe8bb6de209"
+  },
+  {
+    "uuid": "d27cef46bc8445130cc07c600da06185",
+    "suggestion": "Assistant Professor of Biochemistry",
+    "normalized_job_title": "assistant professor of biochemistry",
+    "parent_uuid": "288673183df1c7d9c2431d6c069f98d9"
+  },
+  {
+    "uuid": "cf742e9913aa53e70e28aa68e598b8c0",
+    "suggestion": "Assistant Professor of Chemistry",
+    "normalized_job_title": "assistant professor of chemistry",
+    "parent_uuid": "288673183df1c7d9c2431d6c069f98d9"
+  },
+  {
+    "uuid": "2ac6e09b46a18123a3fe1416ec49c5b2",
+    "suggestion": "Assistant Professor of Environmental Science",
+    "normalized_job_title": "assistant professor of environmental science",
+    "parent_uuid": "314c065f7451c073769cf8a6a77aae9b"
+  },
+  {
+    "uuid": "a6dbfea6ac9045084c5f12539fb8b02b",
+    "suggestion": "Assistant Professor of Environmental Studies",
+    "normalized_job_title": "assistant professor of environmental studies",
+    "parent_uuid": "314c065f7451c073769cf8a6a77aae9b"
+  },
+  {
+    "uuid": "774d5b776acb0a36c72b48fde658497e",
+    "suggestion": "Assistant Professor of Physics",
+    "normalized_job_title": "assistant professor of physics",
+    "parent_uuid": "048ff2104dda3c986a5500358c86367a"
+  },
+  {
+    "uuid": "51829b314e07dc23ad6d0570076cd016",
+    "suggestion": "Assistant Professor of Anthropology",
+    "normalized_job_title": "assistant professor of anthropology",
+    "parent_uuid": "07abb96d97818b00ecd040d7a0f47176"
+  },
+  {
+    "uuid": "b3e36421723526ecb86596f02147d239",
+    "suggestion": "Assistant Professor of Archaeology",
+    "normalized_job_title": "assistant professor of archaeology",
+    "parent_uuid": "07abb96d97818b00ecd040d7a0f47176"
+  },
+  {
+    "uuid": "1252b0d191a5a3eaa8da9aeea990f6c7",
+    "suggestion": "Assistant Professor of Latin American Studies",
+    "normalized_job_title": "assistant professor of latin american studies",
+    "parent_uuid": "4af3836c61304124058069060a567ebb"
+  },
+  {
+    "uuid": "efb2b547f9b4c92d81ba76fb6b24f8d9",
+    "suggestion": "Assistant Professor of Economics",
+    "normalized_job_title": "assistant professor of economics",
+    "parent_uuid": "45d7d4131c69ecdf3b8ddc245332b51b"
+  },
+  {
+    "uuid": "0f6e4a2694a4d9fbba2115eb50ddd62c",
+    "suggestion": "Assistant Professor of Geography",
+    "normalized_job_title": "assistant professor of geography",
+    "parent_uuid": "7a0e7f1fe1b78e4fc021b94db88baa53"
+  },
+  {
+    "uuid": "5ca4d9e2171c488bf56f12c3e4729c29",
+    "suggestion": "Assistant Professor of Political Science",
+    "normalized_job_title": "assistant professor of political science",
+    "parent_uuid": "aca599ec9562e5e52723cafb6e9d2c1d"
+  },
+  {
+    "uuid": "395889a44d25571b53d13b8229b7dd29",
+    "suggestion": "Assistant Professor of Public Administration",
+    "normalized_job_title": "assistant professor of public administration",
+    "parent_uuid": "aca599ec9562e5e52723cafb6e9d2c1d"
+  },
+  {
+    "uuid": "eff9862063f60dc731927224353bbeec",
+    "suggestion": "Assistant Professor of Psychology",
+    "normalized_job_title": "assistant professor of psychology",
+    "parent_uuid": "157d104fb9295abb821ff19f5a9f05ae"
+  },
+  {
+    "uuid": "31c7b9e4e4f8cb03f80807ca9fb9d5d7",
+    "suggestion": "Assistant Professor of Sociology",
+    "normalized_job_title": "assistant professor of sociology",
+    "parent_uuid": "a3404cd2894b19d3214dba2fdd4b18b4"
+  },
+  {
+    "uuid": "7e72b4e5a8b2ea1117dae021e950333b",
+    "suggestion": "Assistant Professor Surgical Technology",
+    "normalized_job_title": "assistant professor surgical technology",
+    "parent_uuid": "db171953040f1d0faa838ae4fb3b7c3f"
+  },
+  {
+    "uuid": "b63095ecada30bd2a5e2340852c80d7c",
+    "suggestion": "Assistant Professor Nurse Education",
+    "normalized_job_title": "assistant professor nurse education",
+    "parent_uuid": "f11ff6b88b2dfb6a10020ee596cf8844"
+  },
+  {
+    "uuid": "6a9a8a45c7a4a0305b8bb8a0f980cba8",
+    "suggestion": "Assistant Professor of Nursing",
+    "normalized_job_title": "assistant professor of nursing",
+    "parent_uuid": "f11ff6b88b2dfb6a10020ee596cf8844"
+  },
+  {
+    "uuid": "c340d39b2e5c6267f4278de35945fd39",
+    "suggestion": "Assistant Professor of Education",
+    "normalized_job_title": "assistant professor of education",
+    "parent_uuid": "6d0be879f950f0c9a531f5afb4d17312"
+  },
+  {
+    "uuid": "768a6f9167363503e7331c722b1f736f",
+    "suggestion": "Assistant Professor of Special Education",
+    "normalized_job_title": "assistant professor of special education",
+    "parent_uuid": "6d0be879f950f0c9a531f5afb4d17312"
+  },
+  {
+    "uuid": "1846237a59fddafad66b9fe36f538321",
+    "suggestion": "Assistant Professor of Information Studies",
+    "normalized_job_title": "assistant professor of information studies",
+    "parent_uuid": "494115a349b2b232e6bfa65941df5ebd"
+  },
+  {
+    "uuid": "96d32961152827b686c2d7192635fe0a",
+    "suggestion": "Assistant Professor of Criminal Justice",
+    "normalized_job_title": "assistant professor of criminal justice",
+    "parent_uuid": "6906b80349e8c33386d8393c2f4e92a0"
+  },
+  {
+    "uuid": "ec6d6e16dcf70d1e378232a1d1a702db",
+    "suggestion": "Assistant Professor Business Law and Paralegal Studies",
+    "normalized_job_title": "assistant professor business law and paralegal studies",
+    "parent_uuid": "998a71de29e992c5dc61cd79c09b6cd7"
+  },
+  {
+    "uuid": "4348177c363bc980ec535ad09a642af0",
+    "suggestion": "Assistant Professor of Art",
+    "normalized_job_title": "assistant professor of art",
+    "parent_uuid": "81c31143844d96887dc03b14ecac2250"
+  },
+  {
+    "uuid": "95347a2a520f97e17fbdb583225de31a",
+    "suggestion": "Assistant Professor of Drama",
+    "normalized_job_title": "assistant professor of drama",
+    "parent_uuid": "81c31143844d96887dc03b14ecac2250"
+  },
+  {
+    "uuid": "fd3ae4e40fd33cc7c11b9d4648d1171d",
+    "suggestion": "Assistant Professor of Music",
+    "normalized_job_title": "assistant professor of music",
+    "parent_uuid": "81c31143844d96887dc03b14ecac2250"
+  },
+  {
+    "uuid": "d27e7d8f1c2004635d33bd4e2ff02beb",
+    "suggestion": "Assistant Professor of Theater",
+    "normalized_job_title": "assistant professor of theater",
+    "parent_uuid": "81c31143844d96887dc03b14ecac2250"
+  },
+  {
+    "uuid": "7ef987d1450d11920ca8d114539b11dd",
+    "suggestion": "Assistant Professor of Theatre and Fine Arts",
+    "normalized_job_title": "assistant professor of theatre and fine arts",
+    "parent_uuid": "81c31143844d96887dc03b14ecac2250"
+  },
+  {
+    "uuid": "4d94f253a11821050e0b9233f7eee78b",
+    "suggestion": "Assistant Professor of Theatre History and Dramaturgy",
+    "normalized_job_title": "assistant professor of theatre history and dramaturgy",
+    "parent_uuid": "81c31143844d96887dc03b14ecac2250"
+  },
+  {
+    "uuid": "fa318b8941b89c4a74969a860b2fd1f4",
+    "suggestion": "Assistant Professor Sculpture",
+    "normalized_job_title": "assistant professor sculpture",
+    "parent_uuid": "81c31143844d96887dc03b14ecac2250"
+  },
+  {
+    "uuid": "adcd126ada660bdb6261d04f7f48bad4",
+    "suggestion": "Assistant Professor of Communication",
+    "normalized_job_title": "assistant professor of communication",
+    "parent_uuid": "675597bc4ccfe260b7a0052d423cdaa8"
+  },
+  {
+    "uuid": "8b901a03f41b1717e3ba9414fb330621",
+    "suggestion": "Assistant Professor of Communication Arts",
+    "normalized_job_title": "assistant professor of communication arts",
+    "parent_uuid": "675597bc4ccfe260b7a0052d423cdaa8"
+  },
+  {
+    "uuid": "95655055b6946c6e1fdb554ed00092a6",
+    "suggestion": "Assistant Professor of Speech Communication",
+    "normalized_job_title": "assistant professor of speech communication",
+    "parent_uuid": "675597bc4ccfe260b7a0052d423cdaa8"
+  },
+  {
+    "uuid": "20ca18261ffed7ea06daa10c16c564a2",
+    "suggestion": "Assistant Professor of English",
+    "normalized_job_title": "assistant professor of english",
+    "parent_uuid": "1407f44eab489a942df80658db0cfccc"
+  },
+  {
+    "uuid": "da928fe9927e5bb200d6d37535a7bd7f",
+    "suggestion": "Assistant Professor of German",
+    "normalized_job_title": "assistant professor of german",
+    "parent_uuid": "4e2bef041254e0fe9cd5fbffe5e4482e"
+  },
+  {
+    "uuid": "affef65ab3d6933f532edbb0cf348ce1",
+    "suggestion": "Assistant Professor of Spanish",
+    "normalized_job_title": "assistant professor of spanish",
+    "parent_uuid": "4e2bef041254e0fe9cd5fbffe5e4482e"
+  },
+  {
+    "uuid": "9ecf21d0af4833744a57292b36cf552b",
+    "suggestion": "Assistant Professor of Philosophy",
+    "normalized_job_title": "assistant professor of philosophy",
+    "parent_uuid": "aea694753542ab991979147d32fb3b70"
+  },
+  {
+    "uuid": "75b7e90189dba3fe1c21e387b37e5260",
+    "suggestion": "Assistant Professor of Religion",
+    "normalized_job_title": "assistant professor of religion",
+    "parent_uuid": "aea694753542ab991979147d32fb3b70"
+  },
+  {
+    "uuid": "c672d7c1d6ec54014410688890eb5013",
+    "suggestion": "Assistant Professor in Family Studies",
+    "normalized_job_title": "assistant professor in family studies",
+    "parent_uuid": "6b32c0b1936e3a762547abda292ecec9"
+  },
+  {
+    "uuid": "ec1c28c1075c6fd281dbef94bc0a05c1",
+    "suggestion": "Assistant Professor of Dietetics",
+    "normalized_job_title": "assistant professor of dietetics",
+    "parent_uuid": "6b32c0b1936e3a762547abda292ecec9"
+  },
+  {
+    "uuid": "490b2f672f60940e5d1c7470a5b91502",
+    "suggestion": "Assistant Professor of Family and Consumer Sciences",
+    "normalized_job_title": "assistant professor of family and consumer sciences",
+    "parent_uuid": "6b32c0b1936e3a762547abda292ecec9"
+  },
+  {
+    "uuid": "4b24155fb390064ac9086ae1b455dfe7",
+    "suggestion": "Assistant Professor of Health and Human Performance",
+    "normalized_job_title": "assistant professor of health and human performance",
+    "parent_uuid": "0e6d9251034ac6e8d0d431733b6ea03b"
+  },
+  {
+    "uuid": "3dda93815a133c770bc48e4960fdbe97",
+    "suggestion": "Assistant Professor of Health and Physical Education",
+    "normalized_job_title": "assistant professor of health and physical education",
+    "parent_uuid": "0e6d9251034ac6e8d0d431733b6ea03b"
+  },
+  {
+    "uuid": "40e17e9cdcf6c4af1b88f7ded4c1bae2",
+    "suggestion": "Assistant Professor of Physical Education",
+    "normalized_job_title": "assistant professor of physical education",
+    "parent_uuid": "0e6d9251034ac6e8d0d431733b6ea03b"
+  },
+  {
+    "uuid": "651fe5ad96e1defb0bb1eabbf4549152",
+    "suggestion": "Assistant Professor of Physical Education Teacher Education",
+    "normalized_job_title": "assistant professor of physical education teacher education",
+    "parent_uuid": "0e6d9251034ac6e8d0d431733b6ea03b"
+  },
+  {
+    "uuid": "36dc11c580417920265be23c9e59e151",
+    "suggestion": "Assistant Professor of Recreation Leadership",
+    "normalized_job_title": "assistant professor of recreation leadership",
+    "parent_uuid": "0e6d9251034ac6e8d0d431733b6ea03b"
+  },
+  {
+    "uuid": "2248950f207471324cccd39d9b9d8e56",
+    "suggestion": "Assistant Professor of Air Conditioning and Refrigeration",
+    "normalized_job_title": "assistant professor of air conditioning and refrigeration",
+    "parent_uuid": "5b42002f42413293153a7081e7356a4a"
+  },
+  {
+    "uuid": "5389989d9f5eca5cec24749f5ec07d09",
+    "suggestion": "Assistant Curator",
+    "normalized_job_title": "assistant curator",
+    "parent_uuid": "001c8bd3f1ee0c73472e8eddcddca54f"
+  },
+  {
+    "uuid": "f5fd546e44f22afd75770a96ae66d0ca",
+    "suggestion": "Assistant Superintendent for Curriculum",
+    "normalized_job_title": "assistant superintendent for curriculum",
+    "parent_uuid": "d095e588c61f022374dbb2a2f3e641ff"
+  },
+  {
+    "uuid": "ba3fe0fd75c18b2299852b5c85798d2e",
+    "suggestion": "Assistant Superintendent for Instruction",
+    "normalized_job_title": "assistant superintendent for instruction",
+    "parent_uuid": "d095e588c61f022374dbb2a2f3e641ff"
+  },
+  {
+    "uuid": "8161999ea103b55b223c5111cf585849",
+    "suggestion": "Assistant Elementary Teacher",
+    "normalized_job_title": "assistant elementary teacher",
+    "parent_uuid": "4609c91156c61265684be4197356a375"
+  },
+  {
+    "uuid": "b17e78087607f53258df01f67fd11ba2",
+    "suggestion": "Assistant Reading Teacher",
+    "normalized_job_title": "assistant reading teacher",
+    "parent_uuid": "4609c91156c61265684be4197356a375"
+  },
+  {
+    "uuid": "f36f140b57df01a7e613fceff9b61363",
+    "suggestion": "Assistant Producer",
+    "normalized_job_title": "assistant producer",
+    "parent_uuid": "40d2d6f5a1dfde1a3b5ba2a70377fa0f"
+  },
+  {
+    "uuid": "19a6f40e67a06a595fac7df2fdea877e",
+    "suggestion": "Assistant Director",
+    "normalized_job_title": "assistant director",
+    "parent_uuid": "737f1d855174d2dc520e0054053fa051"
+  },
+  {
+    "uuid": "227efaaf7aa465cceeaa5a147ed5b740",
+    "suggestion": "Assistant GM of Content & Delivery",
+    "normalized_job_title": "assistant gm of content  delivery",
+    "parent_uuid": "2ad4d8628d5b848373a05dfeaa5a13eb"
+  },
+  {
+    "uuid": "3282b019d68f0a3356f05152a62b55ae",
+    "suggestion": "Assistant News Director",
+    "normalized_job_title": "assistant news director",
+    "parent_uuid": "2ad4d8628d5b848373a05dfeaa5a13eb"
+  },
+  {
+    "uuid": "c373f24fe3806ad5de9cf1b49be167ec",
+    "suggestion": "Assistant Basketball Coach",
+    "normalized_job_title": "assistant basketball coach",
+    "parent_uuid": "af6e67f75719df96616cc6190bf3f748"
+  },
+  {
+    "uuid": "053ab71a13ec62bfb5f6e03d5370a44f",
+    "suggestion": "Assistant Coach",
+    "normalized_job_title": "assistant coach",
+    "parent_uuid": "af6e67f75719df96616cc6190bf3f748"
+  },
+  {
+    "uuid": "4d3c60ec0812b96eeb275787e235212b",
+    "suggestion": "Assistant Football Coach",
+    "normalized_job_title": "assistant football coach",
+    "parent_uuid": "af6e67f75719df96616cc6190bf3f748"
+  },
+  {
+    "uuid": "74638c98d793a545175e33d43af5f559",
+    "suggestion": "Assistant Softball Coach",
+    "normalized_job_title": "assistant softball coach",
+    "parent_uuid": "af6e67f75719df96616cc6190bf3f748"
+  },
+  {
+    "uuid": "656d682e77f7acd897190a737b0aeca3",
+    "suggestion": "Assistant Track and Field Coach",
+    "normalized_job_title": "assistant track and field coach",
+    "parent_uuid": "af6e67f75719df96616cc6190bf3f748"
+  },
+  {
+    "uuid": "beb288388a82eb95e1bd29a0066bb1f2",
+    "suggestion": "Assistant Track Coach",
+    "normalized_job_title": "assistant track coach",
+    "parent_uuid": "af6e67f75719df96616cc6190bf3f748"
+  },
+  {
+    "uuid": "5041cdeb57be1e8b3fcb596d14180989",
+    "suggestion": "Assistant Women's Basketball Coach",
+    "normalized_job_title": "assistant womens basketball coach",
+    "parent_uuid": "af6e67f75719df96616cc6190bf3f748"
+  },
+  {
+    "uuid": "4351bea85d7fb012b6794fe51d55ccf1",
+    "suggestion": "Assistant Film Editor",
+    "normalized_job_title": "assistant film editor",
+    "parent_uuid": "1ef43f6cb86a86fdcbf285e69c91803b"
+  },
+  {
+    "uuid": "befac25e8b180ad8c10961e85521ef5e",
+    "suggestion": "Assistant Professor of Surgery",
+    "normalized_job_title": "assistant professor of surgery",
+    "parent_uuid": "76c931a0b0185ff1bf3f38cf72c1f007"
+  },
+  {
+    "uuid": "00a937bd638f902d99d232cd35c30810",
+    "suggestion": "Assistant Teacher",
+    "normalized_job_title": "assistant teacher",
+    "parent_uuid": "3a5e7ad5fc40aad8cea759070b44d3b1"
+  },
+  {
+    "uuid": "6482284e5ad3dba8bd0347b16db677ad",
+    "suggestion": "Assistant Professor of Radiology",
+    "normalized_job_title": "assistant professor of radiology",
+    "parent_uuid": "ed9b3120f52bcf7d22255504d2d28b59"
+  },
+  {
+    "uuid": "6407f4d164bf0404ec262719b416f1c0",
+    "suggestion": "Assistant Clinical Professor/Medical Director Subacute Rehabilitation",
+    "normalized_job_title": "assistant clinical professormedical director subacute rehabilitation",
+    "parent_uuid": "47a4b1fdecd93229eb8bb3b1953b13a6"
+  },
+  {
+    "uuid": "d6211f8e0c2821841a12a6b82c516594",
+    "suggestion": "Assistant-at-Surgery",
+    "normalized_job_title": "assistantatsurgery",
+    "parent_uuid": "cbecaa2f30f5578bd8d739d1670a02e7"
+  },
+  {
+    "uuid": "041db0ac06e402c15565a0d7f3ecf59d",
+    "suggestion": "Assistant Athletic Trainer",
+    "normalized_job_title": "assistant athletic trainer",
+    "parent_uuid": "6d8604b203eae18a1f477e25d4790c71"
+  },
+  {
+    "uuid": "20240bb1c9e3467ef72d023ac69cfe87",
+    "suggestion": "Assistant Speech-Language Pathologist",
+    "normalized_job_title": "assistant speechlanguage pathologist",
+    "parent_uuid": "48bcfab25b04b205e591c8964677ce81"
+  },
+  {
+    "uuid": "3a4f32f0d72f9768b0e4d2d05c7a1233",
+    "suggestion": "Assistant Unit Forester",
+    "normalized_job_title": "assistant unit forester",
+    "parent_uuid": "f8754548ca65924574c1e9a2633a9034"
+  },
+  {
+    "uuid": "a28afd8c52f74c174749abc92f1a90d6",
+    "suggestion": "Assistant Chief of Police",
+    "normalized_job_title": "assistant chief of police",
+    "parent_uuid": "e78bc4a44da24907351e64a19580c933"
+  },
+  {
+    "uuid": "a5c00add600b923a339dcac55b614950",
+    "suggestion": "Assistant Spa Director",
+    "normalized_job_title": "assistant spa director",
+    "parent_uuid": "e8d675bf449644c2fdd1bbe0e6707b87"
+  },
+  {
+    "uuid": "b611169927ed66dafc7631d149938df1",
+    "suggestion": "Assistant Spa Manager",
+    "normalized_job_title": "assistant spa manager",
+    "parent_uuid": "e8d675bf449644c2fdd1bbe0e6707b87"
+  },
+  {
+    "uuid": "3af2c602e9e58a09d73019ee59b773a2",
+    "suggestion": "Assistant Manager/Embalmer",
+    "normalized_job_title": "assistant managerembalmer",
+    "parent_uuid": "b65aa5bc9197ec39981efe3a3e1435be"
+  },
+  {
+    "uuid": "b55ab2dc881c5dd64243d0aaf3499ff1",
+    "suggestion": "Assistant Hairstylist",
+    "normalized_job_title": "assistant hairstylist",
+    "parent_uuid": "759c84264f5267deb976fbf455541fe7"
+  },
+  {
+    "uuid": "c766944fecb38de92e897aa9dded3b94",
+    "suggestion": "Assistant Dean of Students",
+    "normalized_job_title": "assistant dean of students",
+    "parent_uuid": "bddf783ec2ba0085fa7553bf4387c42e"
+  },
+  {
+    "uuid": "6c1000b9e5be158c514252dc69ab207c",
+    "suggestion": "Assistant Director of Residence Life",
+    "normalized_job_title": "assistant director of residence life",
+    "parent_uuid": "bddf783ec2ba0085fa7553bf4387c42e"
+  },
+  {
+    "uuid": "e0b43fda66cd0815783fc36995eca84b",
+    "suggestion": "Assistant Director of Student Activities and Housing",
+    "normalized_job_title": "assistant director of student activities and housing",
+    "parent_uuid": "bddf783ec2ba0085fa7553bf4387c42e"
+  },
+  {
+    "uuid": "170dbace0402e4feddd61e6b777b9660",
+    "suggestion": "Assistant Hall Director",
+    "normalized_job_title": "assistant hall director",
+    "parent_uuid": "bddf783ec2ba0085fa7553bf4387c42e"
+  },
+  {
+    "uuid": "d4025fcb544be2dc53e6445fdc27fdd7",
+    "suggestion": "Assistant Manager Retail",
+    "normalized_job_title": "assistant manager retail",
+    "parent_uuid": "045d31612eb7c3be4972a345dc6897f4"
+  },
+  {
+    "uuid": "57131491557136e12870de6ec2a591af",
+    "suggestion": "Assistant Store Manager",
+    "normalized_job_title": "assistant store manager",
+    "parent_uuid": "045d31612eb7c3be4972a345dc6897f4"
+  },
+  {
+    "uuid": "4aae247b57aebbff4d989f072e8f27bb",
+    "suggestion": "Assistant Innkeeper",
+    "normalized_job_title": "assistant innkeeper",
+    "parent_uuid": "c6b5b1a023205bda4212a3c5b5783681"
+  },
+  {
+    "uuid": "d7255e4b6c0628ad5dbe774ad84724c9",
+    "suggestion": "Assistant Import Manager",
+    "normalized_job_title": "assistant import manager",
+    "parent_uuid": "edecdd59dc6d5688271440cfffcb577c"
+  },
+  {
+    "uuid": "87d2b1080469f47c334fcad092226d46",
+    "suggestion": "Assistant Chief Train Dispatcher",
+    "normalized_job_title": "assistant chief train dispatcher",
+    "parent_uuid": "570fe7664f60b83eb4b08e5d0ee29297"
+  },
+  {
+    "uuid": "2a917f0ad339cd06821f2f9caa1dba59",
+    "suggestion": "Assistant To The Director",
+    "normalized_job_title": "assistant to the director",
+    "parent_uuid": "fa6db69f93a66d3f2773079047b69739"
+  },
+  {
+    "uuid": "a368a2c9f94ef1200068099621a4503b",
+    "suggestion": "Assistant To The President",
+    "normalized_job_title": "assistant to the president",
+    "parent_uuid": "fa6db69f93a66d3f2773079047b69739"
+  },
+  {
+    "uuid": "5d184e1cd6557716c7c640f74d873662",
+    "suggestion": "Assistant To The Vice President",
+    "normalized_job_title": "assistant to the vice president",
+    "parent_uuid": "fa6db69f93a66d3f2773079047b69739"
+  },
+  {
+    "uuid": "749c978e6cf83117bee564ea7a32b2c5",
+    "suggestion": "Assistant Secretary",
+    "normalized_job_title": "assistant secretary",
+    "parent_uuid": "74bd19c3156d249a7fe8eb3148fbc081"
+  },
+  {
+    "uuid": "62f72d766b446348321721b27b079d9e",
+    "suggestion": "Assistant Editor",
+    "normalized_job_title": "assistant editor",
+    "parent_uuid": "da412504dd7b130414b7bbfa2acd563b"
+  },
+  {
+    "uuid": "8d5bea2c44e6de0a4b2b2471ac91750a",
+    "suggestion": "Assistant Statistician",
+    "normalized_job_title": "assistant statistician",
+    "parent_uuid": "325e2251e20170928426473156bd3c48"
+  },
+  {
+    "uuid": "4129be0ead96916e7c6bc7c449c09b8a",
+    "suggestion": "Assistant Construction Superintendent",
+    "normalized_job_title": "assistant construction superintendent",
+    "parent_uuid": "dee8d76e8c2440c128508566e1c57ff3"
+  },
+  {
+    "uuid": "1e6e874e7723072520034274f81f35b2",
+    "suggestion": "Assistant Foreman",
+    "normalized_job_title": "assistant foreman",
+    "parent_uuid": "dee8d76e8c2440c128508566e1c57ff3"
+  },
+  {
+    "uuid": "97fae27c64118fd58f587058eba61f8f",
+    "suggestion": "Assistant Director of Plant Operations",
+    "normalized_job_title": "assistant director of plant operations",
+    "parent_uuid": "6261988e885c4f30f6211bda9c319a99"
+  },
+  {
+    "uuid": "b5e0157ae46dc5da35e43af22754eb45",
+    "suggestion": "Assistant HVAC Mechanic",
+    "normalized_job_title": "assistant hvac mechanic",
+    "parent_uuid": "27274f599462a95966c6d9b75f961469"
+  },
+  {
+    "uuid": "773564299146dde2a91e176fd1480b7f",
+    "suggestion": "Assistant Offset Press Operator",
+    "normalized_job_title": "assistant offset press operator",
+    "parent_uuid": "96f1cf15fe5880d8660c70f0756944ab"
+  },
+  {
+    "uuid": "f67af6bf957ae2e11ae48b7c8a6049af",
+    "suggestion": "Assistant Pressman",
+    "normalized_job_title": "assistant pressman",
+    "parent_uuid": "96f1cf15fe5880d8660c70f0756944ab"
+  },
+  {
+    "uuid": "60c3ae8e606ddb512d0d22b3fc1768fb",
+    "suggestion": "Assistant Designer",
+    "normalized_job_title": "assistant designer",
+    "parent_uuid": "34c114a2179a5673598a44697d2fe6fb"
+  },
+  {
+    "uuid": "72a01436f74aa23efe8294fee5d5baa6",
+    "suggestion": "Assistant Plant Control Operator",
+    "normalized_job_title": "assistant plant control operator",
+    "parent_uuid": "6fdcd2bf3c2752963a3c1ceb00d0d09f"
+  },
+  {
+    "uuid": "3d51b62f4327d9e2577c15d9ba2734de",
+    "suggestion": "Assistant Boiler Operator",
+    "normalized_job_title": "assistant boiler operator",
+    "parent_uuid": "75a75c165df6317d601e1bbca3ec29b5"
+  },
+  {
+    "uuid": "e85984a560d1aeb7446e425f6e880509",
+    "suggestion": "Assistant Operator",
+    "normalized_job_title": "assistant operator",
+    "parent_uuid": "e3f3244ad58f52589c7f42d636884892"
+  },
+  {
+    "uuid": "3ec4dac1f1dbda4a4393697ab5ed32fb",
+    "suggestion": "Assistant Manager Airside Operations",
+    "normalized_job_title": "assistant manager airside operations",
+    "parent_uuid": "c82e3a3c5e5a0824914be7ef5dff1e44"
+  },
+  {
+    "uuid": "ae76468e22dc8dc31bdf82576fa2a5de",
+    "suggestion": "Assistant Passenger Locomotive Engineer",
+    "normalized_job_title": "assistant passenger locomotive engineer",
+    "parent_uuid": "b188f6909672a9ef802d221e67ec00b6"
+  },
+  {
+    "uuid": "61539f60af4486487fc165bc5aa07cc2",
+    "suggestion": "Assistant Floor Covering Printer",
+    "normalized_job_title": "assistant floor covering printer",
+    "parent_uuid": "306db1c7b107844442875474968a66ed"
+  },
+  {
+    "uuid": "aa7ef86b7a39d8718e36290d115e37ef",
+    "suggestion": "Assistant Professor of History",
+    "normalized_job_title": "assistant professor of history",
+    "parent_uuid": "2311892cb8cf483f3b6a17489be5057d"
+  },
+  {
+    "uuid": "9b1363da9503dbd4142c0274a88e8d4b",
+    "suggestion": "Assistant",
+    "normalized_job_title": "assistant",
+    "parent_uuid": "ff281d7eb01f4dba07337d20aebff7f5"
+  },
+  {
+    "uuid": "fcb7df2699838134ed5a54e613da4861",
+    "suggestion": "Assistant Cook",
+    "normalized_job_title": "assistant cook",
+    "parent_uuid": "8d0ff26f2093731206bd5afa093717da"
+  },
+  {
+    "uuid": "db3947f3e4cc750670b1e6bb252c4200",
+    "suggestion": "Assistant Principal",
+    "normalized_job_title": "assistant principal",
+    "parent_uuid": "dba5edaa4f35301e0bff15aead446ab8"
+  },
+  {
+    "uuid": "0a3209311c81428e3e01814a1096ade1",
+    "suggestion": "Assistant Engineer",
+    "normalized_job_title": "assistant engineer",
+    "parent_uuid": "b188f6909672a9ef802d221e67ec00b6"
+  },
+  {
+    "uuid": "9aa7fb8184d6037886d6fc715aec7422",
+    "suggestion": "Assistant Scientist",
+    "normalized_job_title": "assistant scientist",
+    "parent_uuid": "473b5eb044d8aaadc596a1dc5ae81444"
+  },
+  {
+    "uuid": "6be7a10fa26c4607d87c35fc9863fc22",
+    "suggestion": "Assistant Professor",
+    "normalized_job_title": "assistant professor",
+    "parent_uuid": "0e6d9251034ac6e8d0d431733b6ea03b"
+  },
+  {
+    "uuid": "a961c0b5fe1a3bec058914fcd2f30e4c",
+    "suggestion": "Assistant Librarian",
+    "normalized_job_title": "assistant librarian",
+    "parent_uuid": "340ba58cc336fee4e3120d2a1a09b26b"
+  },
+  {
+    "uuid": "f79e93bbce546e40fc681d4bffb62591",
+    "suggestion": "Assistant Manager",
+    "normalized_job_title": "assistant manager",
+    "parent_uuid": "045d31612eb7c3be4972a345dc6897f4"
+  },
+  {
+    "uuid": "e229eefdac86a7e9a2276df47f3c2356",
+    "suggestion": "Assistant Research Scientist",
+    "normalized_job_title": "assistant research scientist",
+    "parent_uuid": "0581dd6e7d2b00f3d449837e60ab76a0"
+  }
+]

@@ -1,0 +1,12 @@
+version: '3.8'
+services:
+  dawmock:
+    container_name: dawmock
+    image: rodolpheche/wiremock:2.27.2-alpine
+    ports:
+      - "8090:8090"
+    command: "--port 8090 --verbose"
+    volumes:
+      - ./wiremock/mock:/home/wiremock
+
+

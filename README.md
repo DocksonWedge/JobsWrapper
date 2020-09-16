@@ -5,7 +5,7 @@ This is an example project with a simple api to show off automated REST testing 
   * Kotlinx
   * Maven
 * **Test Framework**
-  * Kotlin-test + JUnit5
+  * Kotest + JUnit5
   * use restassured for endpoint tests 
   * assertJ wanted for unit tests??
   
@@ -19,14 +19,17 @@ This is an example project with a simple api to show off automated REST testing 
 * Setup test deploy pipeline
 * output test results report for non-technical review
 
-To run(needs environment variables):
+**To run(needs environment variables)**:
+
 mvn clean compile exec:java -Dexec.mainClass=app.MainKt
 
 **To run(with all tests including endpoint that needs to be excluded):**
+
 mvn clean compile exec:java -Dexec.mainClass=app.MainKt
 
-**To build and package**
+**To build and package:**
 mvn clean install -DskipTests
 
 **Starting local docker images, including mocks:**
-at the project root run `run_local.sh`
+
+at the project root run `run_local.sh` OR `restart.sh` to make sure you shut down existing containers

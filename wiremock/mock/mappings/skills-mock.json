@@ -1,0 +1,13 @@
+{
+  "request": {
+    "method": "GET",
+    "url": "/jobs/autocomplete?begins_with=assistant"
+  },
+  "response": {
+    "status": 200,
+    "headers": {
+      "Content-Type": "application/json"
+    },
+    "bodyFileName": "skills-assistant-endpoint.json"
+  }
+}
